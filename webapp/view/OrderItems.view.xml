@@ -1,0 +1,43 @@
+<mvc:View controllerName="task_orders.controller.OrderItems" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page id="any" title="{i18n>title}" showNavButton="true" navButtonPress=".onNavBack">
+			     
+				<content>
+					<!--<Button text= "Open" press="onPress" />			-->
+					 <Table id="orders_item_table" items="{idModel>/products}" >
+					
+			          <columns>
+			            <Column> <Text text="Order ID"/></Column>
+			            <Column> <Text text="Product ID"/></Column>
+			            <Column> <Text text="Product Name"/></Column>
+			            <Column> <Text text="Unit Price"/></Column>
+			            <Column> <Text text="Quantity"/></Column>
+			            
+			          </columns>
+			          <items>
+			            <ColumnListItem type = "Navigation"  press = "onPress" >
+			              <cells>
+			                <Text text="{idModel>OrderID}"/>
+			                <Text text="{idModel>ProductID}"/>
+			                <Text text="{idModel>ProductName}"/>
+			                <Text text="{idModel>UnitPrice}"/>
+			                <Text text="{idModel>Quantity}"/>
+			              </cells>
+			            </ColumnListItem>
+			          </items>
+			        </Table>
+							
+				</content>
+			</Page>
+		</pages>
+	
+	
+	   <!--<Page id="any" showHeader="false">-->
+    	
+    <!--	<Button text= "Open" press="onPress" />-->
+        <!--<core:Fragment fragmentName="Testing.view.myFragment" type="XML"/>-->
+    <!--</Page>-->
+	</App>
+</mvc:View>
