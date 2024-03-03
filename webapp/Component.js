@@ -16,7 +16,7 @@ sap.ui.define([
            //this.ProductDetailsController = new ProductDetailsController(this.getRootControl());
             // this.ProductDetailsController = new ProductDetailsController(this);
 			// additional initialization can be done here
-		
+
 			this.getRouter().initialize();
 		}
 
