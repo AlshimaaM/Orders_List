@@ -1,0 +1,39 @@
+<mvc:View controllerName="task_orders.controller.Overview" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+					
+				<content>
+					 <Table id="orders_table" items="{/Orders}"  >
+					 	 <!--<Table id="orders_table" items="{/Orders}"  mode="SingleSelectLeft" selectionChange="onSelection">-->
+					 
+			          <columns>
+			            <Column> <Text text="Order ID"/></Column>
+			            <Column> <Text text="Customer ID"/></Column>
+			            <Column> <Text text="Employee ID"/></Column>
+			            <Column> <Text text="OrderDate"/></Column>
+			            <Column> <Text text="Ship Via"/></Column>
+			            <Column> <Text text="Ship Name"/></Column>
+			            <!--<Column> <Text text="Product ID"/></Column>-->
+			            
+			          </columns>
+			          <items>
+			            <ColumnListItem type = "Navigation"  press = "onPress" >
+			              <cells>
+			                <Text text="{OrderID}"/>
+			                <Text text="{CustomerID}"/>
+			                <Text text="{EmployeeID}"/>
+			                <Text text="{OrderDate}"/>
+			                <Text text="{ShipVia}"/>
+			                <Text text="{ShipName}"/>
+			                <!--<Text text="{ProductID}"/>-->
+			              </cells>
+			            </ColumnListItem>
+			          </items>
+			        </Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
